@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import SocialMedias from '../components/SocialMedias/index.astro'
 import { Icon } from 'astro-icon'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -89,36 +90,9 @@ const testimonials: { name: string; role: string; profileSrc: string; starts: nu
 					</p>
 					<div class="mt-14 lg:flex lg:items-center lg:gap-x-4">
 						<span class="hidden text-gray-500 text-lg lg:block">Follow me</span>
-						<ul class="flex justify-center gap-x-4 lg:justify-start">
-							<li>
-								<div class="w-12 h-12 flex justify-center items-center bg-[#0077B5] rounded-full">
-									<div class="w-8 h-8 text-white">
-										<Icon name="mdi:linkedin" />
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w-12 h-12 flex justify-center items-center bg-[#F77737] rounded-full">
-									<div class="w-8 h-8 text-white">
-										<Icon name="mdi:instagram" />
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w-12 h-12 flex justify-center items-center bg-red-400 rounded-full">
-									<div class="w-8 h-8 text-white">
-										<Icon name="mdi:youtube" />
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w-12 h-12 flex justify-center items-center bg-[#1DA1F2] rounded-full">
-									<div class="w-8 h-8 text-white">
-										<Icon name="mdi:twitter" />
-									</div>
-								</div>
-							</li>
-						</ul>
+						<div class="flex justify-center lg:justify-start">
+							<SocialMedias />
+						</div>
 					</div>
 					<div class="flex gap-x-4 mt-8 lg:w-96">
 						<button
@@ -267,36 +241,9 @@ const testimonials: { name: string; role: string; profileSrc: string; starts: nu
 				<div class="w-4 h-4 text-gray-500"><Icon name="mdi:email" /></div>
 				<span>caionobrex@gmail.com</span>
 			</div>
-			<ul class="flex justify-center gap-x-4 mt-6">
-				<li>
-					<div class="w-12 h-12 flex justify-center items-center bg-[#0077B5] rounded-full">
-						<div class="w-8 h-8 text-white">
-							<Icon name="mdi:linkedin" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="w-12 h-12 flex justify-center items-center bg-[#F77737] rounded-full">
-						<div class="w-8 h-8 text-white">
-							<Icon name="mdi:instagram" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="w-12 h-12 flex justify-center items-center bg-red-400 rounded-full">
-						<div class="w-8 h-8 text-white">
-							<Icon name="mdi:youtube" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="w-12 h-12 flex justify-center items-center bg-[#1DA1F2] rounded-full">
-						<div class="w-8 h-8 text-white">
-							<Icon name="mdi:twitter" />
-						</div>
-					</div>
-				</li>
-			</ul>
+			<div class="mt-6 flex justify-center">
+				<SocialMedias />
+			</div>
 		</div>
 	</footer>
 </Layout>
