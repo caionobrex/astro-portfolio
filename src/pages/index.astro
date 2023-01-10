@@ -1,0 +1,318 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Icon } from 'astro-icon'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+const projects: { href: string, imageSrc: string }[] = [
+	{
+		href: '',
+		imageSrc: 'https://portfolio-mauve-delta.vercel.app/images/project10.png',
+	},
+	{
+		href: '',
+		imageSrc: '/images/ccn-project.png',
+	},
+	{
+		href: '',
+		imageSrc: '/images/oficina-de-influencers-project.png',
+	},
+	{
+		href: '',
+		imageSrc: '/images/seguro-carregour-project.png',
+	},
+	{
+		href: '',
+		imageSrc: '/images/cheers-project.png',
+	},
+	{
+		href: '',
+		imageSrc: 'https://portfolio-mauve-delta.vercel.app/images/project7.png',
+	},
+	{
+		href: '',
+		imageSrc: 'https://portfolio-mauve-delta.vercel.app/images/project8.png',
+	},
+	{
+		href: '',
+		imageSrc: 'https://portfolio-mauve-delta.vercel.app/images/project2.png',
+	},
+	{
+		href: '',
+		imageSrc: 'https://portfolio-mauve-delta.vercel.app/images/project1.png',
+	},
+	{
+		href: '',
+		imageSrc: 'https://portfolio-mauve-delta.vercel.app/images/project9.png',
+	},
+]
+const testimonials: { name: string; role: string; profileSrc: string; starts: number; description: string }[] = [
+	{
+		name: 'Ronald Richard',
+		role: 'UI/UX Designer',
+		profileSrc: '/images/me.jpeg',
+		starts: 4.5,
+		description: 'You cant notice the diference between figma and what this guy does.',
+	},
+	{
+		name: 'Ronald Richard',
+		role: 'UI/UX Designer',
+		profileSrc: '/images/me.jpeg',
+		starts: 4.5,
+		description: 'One of the best additions to our feedback loop has been the company-wide adoption of Fellow.',
+	}
+]
+---
+
+<Layout title="Welcome to Astro.">
+	<header class="bg-primary py-5 text-white lg:hidden">
+		<div class="container flex justify-between">
+			<h1 class="text-2xl">Logo</h1>
+			<button type="button">Menu</button>
+		</div>
+	</header>
+	<main>
+		<section class="relative">
+		<div class="hidden bg-primary absolute left-0 top-0 w-[3rem] h-full rounded-r-2xl lg:block" />
+			<div class="container py-10 lg:flex">
+				<div class="basis-full">
+					<h1 class="flex flex-col gap-y-5">
+						<span class="text-2xl">HI!</span>
+						<span class="font-semibold text-3xl">I'm Caio Nobre</span>
+						<span class="font-semibold text-3xl">FullStack developer.</span>
+					</h1>
+					<p class="mt-8 text-xl text-gray-600 tracking-wide">
+						FullStack developer based in Fortaleza, Brazil.
+					</p>
+					<p class="mt-2 text-xl text-gray-600 tracking-wide">
+						I am coding with a clean and beautiful problem solving in mind.
+					</p>
+					<div class="mt-14 lg:flex lg:items-center lg:gap-x-4">
+						<span class="hidden text-gray-500 text-lg lg:block">Follow me</span>
+						<ul class="flex justify-center gap-x-4 lg:justify-start">
+							<li>
+								<div class="w-12 h-12 flex justify-center items-center bg-[#0077B5] rounded-full">
+									<div class="w-8 h-8 text-white">
+										<Icon name="mdi:linkedin" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="w-12 h-12 flex justify-center items-center bg-[#F77737] rounded-full">
+									<div class="w-8 h-8 text-white">
+										<Icon name="mdi:instagram" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="w-12 h-12 flex justify-center items-center bg-red-400 rounded-full">
+									<div class="w-8 h-8 text-white">
+										<Icon name="mdi:youtube" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="w-12 h-12 flex justify-center items-center bg-[#1DA1F2] rounded-full">
+									<div class="w-8 h-8 text-white">
+										<Icon name="mdi:twitter" />
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="flex gap-x-4 mt-8 lg:w-96">
+						<button
+							type="button"
+							class="flex-1 rounded-xl bg-[#FF2950] text-white py-3 outline-none"
+						>
+							Send Request
+						</button>
+						<button
+							type="button"
+							class="flex-1 border-2 border-primary rounded-xl outline-none text-gray-600"
+						>
+							Download CV
+						</button>
+					</div>
+				</div>
+				<div class="hidden basis-full lg:flex lg:justify-center lg:items-center">
+					<div class="relative">
+						<div class="w-72 h-72 rounded-full shadow-md">
+							<img src="/images/me.jpeg" class="w-full h-full rounded-full" alt="">
+							<img src="/images/bullets.svg" class="w-full h-full absolute -top-20 -right-20 -z-10" alt="">
+							<img src="/images/bullets.svg" class="w-full h-full absolute -bottom-20 -left-20 -z-10" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="bg-primary rounded-3xl py-8 mt-10 transition-all duration-500 lg:flex lg:px-4 lg:w-[1100px] lg:mx-auto lg:shadow lg:hover:shadow-xl">
+			<div class="basis-full">
+				<img src="/images/image1.png" class="hidden lg:block lg:w-full" />
+			</div>
+			<div class="basis-full lg:flex lg:flex-col lg:gap-y-10">
+				<header class="flex justify-center text-white lg:justify-start">
+					<h2 class="flex flex-col gap-y-3">
+						<span class="text-center text-4xl font-semibold lg:text-left">12+</span>
+						<span class="text-xl">Completed Projects</span>
+					</h2>
+				</header>
+				<main class="px-6 mt-10 text-white lg:mt-0 lg:px-0">
+					<h2 class="mb-5 text-3xl">Glad to help You!</h2>
+					<p class="text-lg leading-8">As a web developer, I'm very keen on learning new and pioneering technologies, programming languages, and development techniques.</p>
+					<img src="/images/image1.png" class="lg:hidden" />
+				</main>
+			</div>
+		</div>
+		<section class="py-14 container">
+			<h2 class="text-center text-3xl font-semibold">Why Hire Me?</h2>
+			<ul class="flex flex-col gap-y-16 mt-16 lg:flex-row lg:gap-x-14">
+				<li class="flex flex-col items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+						<img src="/icons/people-chating.svg" alt="">
+					</div>
+					<div class="text-center mt-6">
+						<h3>Communicative</h3>
+						<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+					</div>
+				</li>
+				<li class="flex flex-col items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+						<img src="/icons/man-at-desk.svg" alt="">
+					</div>
+					<div class="text-center mt-6">
+						<h3>Professional</h3>
+						<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+					</div>
+				</li>
+				<li class="flex flex-col items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+						<img src="/icons/handshake.svg" alt="">
+					</div>
+					<div class="text-center mt-6">
+						<h3>Collaborative​</h3>
+						<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+					</div>
+				</li>
+				<li class="flex flex-col items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+						<img src="/icons/star.svg" alt="">
+					</div>
+					<div class="text-center mt-6">
+						<h3>Quality</h3>
+						<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="mt-4">
+			<div class="container"> 
+				<h2 class="text-3xl mb-8 font-semibold">Portfolio</h2>
+				<ul class="grid grid-cols-2 gap-6 lg:grid-cols-2">
+					{projects.map((project) => (
+						<li class="shadow-md transition-all duration-500 lg:hover:shadow-2xl">
+							<img class="w-full h-full object-cover" src={project.imageSrc} alt="" />
+						</li>
+					))}
+				</ul>
+			</div>
+		</section>
+		<div class="bg-primary mt-20">
+			<div class="container py-6 lg:py-10">
+				<h2 class="text-3xl text-white font-semibold leading-10 lg:text-center lg:text-4xl">I'm Loved By Users And Clients</h2>
+				<div class="swiper mt-6">
+					<ul class="swiper-wrapper">
+						{testimonials.map((testimonial) => (
+							<li class="swiper-slide">
+								<div class="bg-white rounded-3xl p-6 mt-4">
+									<header>
+										<div class="flex gap-x-4">
+											<div class="w-14 h-14 rounde-full">
+												<img src={testimonial.profileSrc} class="w-full h-full rounded-full object-cover" alt="" />
+											</div>
+											<div class="flex flex-col">
+												<span class="font-semibold">{testimonial.name}</span>
+												<span class="text-gray-500">{testimonial.role}</span>
+											</div>
+										</div>
+										<div class="flex items-center mt-6 gap-x-3">
+											<span class="font-semibold">4.5</span>
+											<ul class="flex gap-x-1">
+												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
+											</ul>
+										</div>
+									</header>
+									<main class="mt-6">
+										<p class="text-gray-600">{testimonial.description}</p>
+									</main>
+								</div>
+							</li>
+						))}
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="bg-gray-100 py-8">
+		<div class="container">
+			<div class="flex items-center justify-center gap-x-2">
+				<div class="w-4 h-4 text-gray-500"><Icon name="mdi:email" /></div>
+				<span>caionobrex@gmail.com</span>
+			</div>
+			<ul class="flex justify-center gap-x-4 mt-4">
+				<li>
+					<div class="w-12 h-12 flex justify-center items-center bg-[#0077B5] rounded-full">
+						<div class="w-8 h-8 text-white">
+							<Icon name="mdi:linkedin" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w-12 h-12 flex justify-center items-center bg-[#F77737] rounded-full">
+						<div class="w-8 h-8 text-white">
+							<Icon name="mdi:instagram" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w-12 h-12 flex justify-center items-center bg-red-400 rounded-full">
+						<div class="w-8 h-8 text-white">
+							<Icon name="mdi:youtube" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w-12 h-12 flex justify-center items-center bg-[#1DA1F2] rounded-full">
+						<div class="w-8 h-8 text-white">
+							<Icon name="mdi:twitter" />
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</Layout>
+
+<script>
+	import Swiper, { Autoplay, Pagination } from 'swiper'
+	
+	new Swiper('.swiper', {
+		modules: [Autoplay, Pagination],
+  	loop: true,
+		spaceBetween: 20,
+		autoplay: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		breakpoints: {
+			800: {
+				slidesPerView: 2,
+			}
+		}
+	})
+</script>
