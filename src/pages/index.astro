@@ -210,13 +210,15 @@ const testimonials: { name: string; role: string; profileSrc: string; starts: nu
 		<section class="mt-4">
 			<div class="container"> 
 				<h2 class="text-3xl mb-8 font-semibold">Portfolio</h2>
-				<ul class="grid grid-cols-2 gap-6 lg:grid-cols-2">
-					{projects.map((project) => (
-						<li class="shadow-md transition-all duration-500 lg:hover:shadow-2xl">
-							<img class="w-full h-full object-cover" src={project.imageSrc} alt="" />
-						</li>
-					))}
-				</ul>
+				<div class="swiper">
+					<ul class="swiper-wrapper">
+						{projects.map((project) => (
+							<li class="swiper-slide shadow-md transition-all duration-500 lg:hover:shadow-2xl">
+								<img class="w-full h-full object-cover" src={project.imageSrc} alt="" />
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</section>
 		<div class="bg-primary mt-20">
@@ -255,18 +257,17 @@ const testimonials: { name: string; role: string; profileSrc: string; starts: nu
 							</li>
 						))}
 					</ul>
-					<div class="swiper-pagination"></div>
 				</div>
 			</div>
 		</div>
 	</main>
-	<footer class="bg-gray-100 py-8">
+	<footer class="bg-gray-100 py-10">
 		<div class="container">
 			<div class="flex items-center justify-center gap-x-2">
 				<div class="w-4 h-4 text-gray-500"><Icon name="mdi:email" /></div>
 				<span>caionobrex@gmail.com</span>
 			</div>
-			<ul class="flex justify-center gap-x-4 mt-4">
+			<ul class="flex justify-center gap-x-4 mt-6">
 				<li>
 					<div class="w-12 h-12 flex justify-center items-center bg-[#0077B5] rounded-full">
 						<div class="w-8 h-8 text-white">
@@ -301,15 +302,13 @@ const testimonials: { name: string; role: string; profileSrc: string; starts: nu
 </Layout>
 
 <script>
-	import Swiper, { Autoplay, Pagination } from 'swiper'
-	
+	import Swiper, { Autoplay } from 'swiper'
 	new Swiper('.swiper', {
-		modules: [Autoplay, Pagination],
+		modules: [Autoplay],
   	loop: true,
 		spaceBetween: 20,
-		autoplay: true,
-		pagination: {
-			el: '.swiper-pagination',
+		autoplay: {
+			disableOnInteraction: false,
 		},
 		breakpoints: {
 			800: {
