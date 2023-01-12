@@ -239,8 +239,8 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 				<div class="swiper">
 					<ul class="swiper-wrapper">
 						{projects.map((project) => (
-							<li class="swiper-slide transition-all duration-500">
-								<img class="w-full h-full object-cover" src={project.imageSrc} alt="Project image" />
+							<li class="swiper-slide transition-all duration-500 rounded-xl">
+								<img class="w-full h-full object-cover rounded-xl" src={project.imageSrc} alt="Project image" />
 							</li>
 						))}
 					</ul>
