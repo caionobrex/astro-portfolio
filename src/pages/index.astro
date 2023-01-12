@@ -176,7 +176,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 			<h2 class="text-center text-3xl font-semibold">Why Hire Me?</h2>
 			<ul class="flex flex-col gap-y-16 mt-16 lg:flex-row lg:gap-x-14">
 				<li class="flex flex-col items-center">
-					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center shadow-md">
 						<img src="/icons/people-chating.svg" alt="Chating icon svg">
 					</div>
 					<div class="text-center mt-6">
@@ -187,7 +187,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 					</div>
 				</li>
 				<li class="flex flex-col items-center">
-					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center shadow-md">
 						<img src="/icons/man-at-desk.svg" alt="Man at desk working svg">
 					</div>
 					<div class="text-center mt-6">
@@ -198,7 +198,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 					</div>
 				</li>
 				<li class="flex flex-col items-center">
-					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center shadow-md">
 						<img src="/icons/handshake.svg" alt="handshake icon">
 					</div>
 					<div class="text-center mt-6">
@@ -209,7 +209,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 					</div>
 				</li>
 				<li class="flex flex-col items-center">
-					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
+					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center shadow-md">
 						<img src="/icons/star.svg" alt="yellow star icon">
 					</div>
 					<div class="text-center mt-6">
@@ -227,7 +227,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 				<div class="swiper">
 					<ul class="swiper-wrapper">
 						{projects.map((project) => (
-							<li class="swiper-slide shadow-md transition-all duration-500 lg:hover:shadow-2xl">
+							<li class="swiper-slide transition-all duration-500">
 								<img class="w-full h-full object-cover" src={project.imageSrc} alt="Project image" />
 							</li>
 						))}
