@@ -65,7 +65,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 ]
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Caio Nobre's portfolio.">
 	<header class="bg-primary py-5 text-white lg:hidden">
 		<div class="container flex justify-between">
 			<h1 class="text-2xl">Logo</h1>
@@ -114,9 +114,9 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 				<div class="hidden basis-full lg:flex lg:justify-center lg:items-center">
 					<div class="relative">
 						<div class="w-72 h-72 rounded-full shadow-md">
-							<img src="/images/me.jpeg" class="w-full h-full rounded-full" alt="">
-							<img src="/images/bullets.svg" class="w-full h-full absolute -top-20 -right-20 -z-10" alt="">
-							<img src="/images/bullets.svg" class="w-full h-full absolute -bottom-20 -left-20 -z-10" alt="">
+							<img src="/images/me.jpeg" class="w-full h-full rounded-full" alt="Caio Nobre's profile picture">
+							<img src="/images/bullets.svg" class="w-full h-full absolute -top-20 -right-20 -z-10" alt="Orange bullets icon svg">
+							<img src="/images/bullets.svg" class="w-full h-full absolute -bottom-20 -left-20 -z-10" alt="Orange bullets icon svg">
 						</div>
 					</div>
 				</div>
@@ -177,38 +177,46 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 			<ul class="flex flex-col gap-y-16 mt-16 lg:flex-row lg:gap-x-14">
 				<li class="flex flex-col items-center">
 					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
-						<img src="/icons/people-chating.svg" alt="">
+						<img src="/icons/people-chating.svg" alt="Chating icon svg">
 					</div>
 					<div class="text-center mt-6">
 						<h3 class="text-xl font-medium mb-2">Communicative</h3>
-						<p class="text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+						<p class="text-gray-600">
+							I am a highly communicative individual. I am a great listener and pay attention to the needs of others.
+						</p>
 					</div>
 				</li>
 				<li class="flex flex-col items-center">
 					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
-						<img src="/icons/man-at-desk.svg" alt="">
+						<img src="/icons/man-at-desk.svg" alt="Man at desk working svg">
 					</div>
 					<div class="text-center mt-6">
 						<h3 class="text-xl font-medium mb-2">Professional</h3>
-						<p class="text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+						<p class="text-gray-600">
+						 	I possess the necessary knowledge, skills, and qualifications to excel in my field.
+						</p>
 					</div>
 				</li>
 				<li class="flex flex-col items-center">
 					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
-						<img src="/icons/handshake.svg" alt="">
+						<img src="/icons/handshake.svg" alt="handshake icon">
 					</div>
 					<div class="text-center mt-6">
 						<h3 class="text-xl font-medium mb-2">Collaborative​</h3>
-						<p class="text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+						<p class="text-gray-600">
+							I believe that the best results are achieved when people work together and share their ideas, skills and resources.
+						</p>
 					</div>
 				</li>
 				<li class="flex flex-col items-center">
 					<div class="bg-gray-200 rounded-full w-28 h-28 flex justify-center items-center">
-						<img src="/icons/star.svg" alt="">
+						<img src="/icons/star.svg" alt="yellow star icon">
 					</div>
 					<div class="text-center mt-6">
 						<h3 class="text-xl font-medium mb-2">Quality</h3>
-						<p class="text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+						<p class="text-gray-600">
+							Developing software that is reliable, efficient, that has clean code and user-friendly.
+						</p>
 					</div>
 				</li>
 			</ul>
@@ -220,7 +228,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 					<ul class="swiper-wrapper">
 						{projects.map((project) => (
 							<li class="swiper-slide shadow-md transition-all duration-500 lg:hover:shadow-2xl">
-								<img class="w-full h-full object-cover" src={project.imageSrc} alt="" />
+								<img class="w-full h-full object-cover" src={project.imageSrc} alt="Project image" />
 							</li>
 						))}
 					</ul>
@@ -238,7 +246,11 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 									<header>
 										<div class="flex gap-x-4">
 											<div class="w-14 h-14 rounde-full">
-												<img src={testimonial.profileSrc} class="w-full h-full rounded-full object-cover" alt="" />
+												<img
+													src={testimonial.profileSrc}
+													class="w-full h-full rounded-full object-cover"
+													alt={`${testimonial.name} Profile picture`}
+												/>
 											</div>
 											<div class="flex flex-col">
 												<span class="font-semibold">{testimonial.name}</span>
@@ -248,11 +260,11 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 										<div class="flex items-center mt-6 gap-x-3">
 											<span class="font-semibold">{testimonial.stars.toFixed(1)}</span>
 											<ul class="flex gap-x-1">
-												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
-												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
-												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
-												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
-												<li><img src="/icons/star.svg" class="w-5 h-5" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" alt="Yellow star icon" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" alt="Yellow star icon" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" alt="Yellow star icon" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" alt="Yellow star icon" /></li>
+												<li><img src="/icons/star.svg" class="w-5 h-5" alt="Yellow star icon" /></li>
 											</ul>
 										</div>
 									</header>
