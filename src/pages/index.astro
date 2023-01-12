@@ -55,12 +55,26 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 		description: 'Caio é uma pessoa fantástica e um ótimo profissional. Mostrou suas competências tanto no front-end quanto no back-end, encarando até projetos de desenvolvimento mobile. Possui conhecimento em várias tecnologias, e se destaca por sua velocidade nas entregas e qualidade de código. Sempre proativo e sem tempo ruim. Foi uma ótima experiência tê-lo na equipe e poder desenvolver vários projetos de software.',
 	},
 	{
+		name: 'Rayan Salewski',
+		role: 'Software Engineer | Java | Kotlin Developer',
+		profileSrc: '/images/rayan.jpeg',
+		stars: 5,
+		description: `Tive o prazer de trabalhar com o Caio em varios projetos e posso com certeza dizer que ele é um dos melhores desenvolvedores que eu tive o prazer de trabalhar.`,
+	},
+	{
+		name: 'Carlos Havila',
+		role: 'Project Manager | Scrum Master',
+		profileSrc: '/images/havila.jpeg',
+		stars: 5,
+		description: `Como um gerente de projeto, é muito importante pra min trabalhar com desenvolvedores que são não apenas tecnicamente habilidosos mas também que são capazes de entregar no prazo e dentro da budget. Caio Nobre execedeu todas minhas expectativa.`,
+	},
+	{
 		name: 'Mateus Leonardo',
 		role: 'Front Engineer',
 		profileSrc: '/images/matheus-arkos.jpeg',
 		stars: 4.5,
 		description: 'Caio é um ótimo profissional, tem amplos conhecimentos em muitas áreas e tecnologias, sem dúvidas foi um prazer trabalhar com ele, foi ótima nossa troca de conhecimentos e experiências!',
-	}
+	},
 ]
 ---
 
@@ -240,7 +254,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 					<ul class="swiper-wrapper">
 						{testimonials.map((testimonial) => (
 							<li class="swiper-slide">
-								<div class="bg-white rounded-3xl p-6 mt-4">
+								<div class="bg-white rounded-3xl p-6 mt-4 min-h-[22rem]">
 									<header>
 										<div class="flex gap-x-4">
 											<div class="w-14 h-14 rounde-full">
