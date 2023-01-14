@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import SocialMedias from '../components/SocialMedias/index.astro'
 import { Icon } from 'astro-icon'
 import 'swiper/css'
+import 'swiper/css/pagination'
 
 const projects: { href: string, imageSrc: string }[] = [
 	{
@@ -244,6 +245,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 							</li>
 						))}
 					</ul>
+					<div class="swiper-pagination first-swiper-pagination"></div>
 				</div>
 			</div>
 		</section>
@@ -287,6 +289,7 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 							</li>
 						))}
 					</ul>
+					<div class="swiper-pagination second-swiper-pagination"></div>
 				</div>
 			</div>
 		</div>
@@ -305,8 +308,26 @@ const testimonials: { name: string; role: string; profileSrc: string; stars: num
 </Layout>
 
 <script>
-	import Swiper, { Autoplay } from 'swiper'
-	new Swiper('.swiper', {
+	import Swiper, { Autoplay, Pagination } from 'swiper'
+	const slides: NodeListOf<HTMLElement> = document.querySelectorAll('.swiper') as NodeListOf<HTMLElement>
+	new Swiper(slides[0], {
+		modules: [Autoplay, Pagination],
+  	loop: true,
+		spaceBetween: 20,
+		pagination: {
+			el: '.first-swiper-pagination',
+			clickable: true,
+		},
+		autoplay: {
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			800: {
+				slidesPerView: 2,
+			}
+		}
+	})
+	new Swiper(slides[1], {
 		modules: [Autoplay],
   	loop: true,
 		spaceBetween: 20,
